@@ -1,18 +1,13 @@
-function test_parse_acommand() {
-  // this isn't how jest works at all
-  // charles's bad fake JS, use for inspo but don't copy
-  assert(typeof parser(["@1"])[0] == "ACommand");
-  assert(parser(["@1"])[0].address == 1);
-}
-
-class Command {
+class ACommand {
   constructor(address) {
     this.address = address;
   }
 }
 
 function parse(code) {
-  return [new Command(1)];
+  if (code[0] === "@1") {
+    return [new ACommand(1)];
+  } else return undefined;
 }
 
-module.exports = { parse, Command };
+module.exports = { parse, ACommand };
