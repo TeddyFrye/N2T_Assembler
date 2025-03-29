@@ -1,5 +1,5 @@
-const { ACommand } = require("../parser/parser");
-const { translate } = require("../translator/translator");
+const { ACommand } = require("../src/parser/parser");
+const { translate } = require("../src/translator/translator");
 
 test("translate ACommand @1", () => {
   const command = new ACommand(1);

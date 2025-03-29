@@ -1,4 +1,4 @@
-const { parse, ACommand } = require("../parser/parser");
+const { parse, ACommand } = require("../src/parser/parser");
 
 test("parse instruction @1", () => {
   const result = parse(["@1"]);
